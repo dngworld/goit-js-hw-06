@@ -1,4 +1,3 @@
-// task 8
 const loginForm = document.querySelector(".login-form");
 loginForm.addEventListener("submit", handlerSubmit);
 
@@ -12,9 +11,9 @@ function handlerSubmit(event) {
   };
 
   if (email.value === "" || password.value === "") {
-    alert("Please fill in all the fields!");
+    return alert("Please fill in all the fields!");
   }
 
-  // console.log(`Email: ${email.value}, Password: ${password.value}`);
+  console.log(`Email: ${email.value}, Password: ${password.value}`);
   event.currentTarget.reset();
 }

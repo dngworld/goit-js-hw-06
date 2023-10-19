@@ -1,5 +1,3 @@
-// task 2
-
 const ingredients = [
   "Potatoes",
   "Mushrooms",
@@ -17,5 +15,5 @@ const markup = ingredients.map((ingredient) => {
 
   return li;
 });
-// console.log(markup);
+
 list.append(...markup);

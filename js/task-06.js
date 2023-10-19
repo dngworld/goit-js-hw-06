@@ -1,14 +1,15 @@
-// task 6
 const input = document.querySelector("#validation-input");
 input.addEventListener("blur", handlerInput);
 
 function handlerInput(event) {
-  const inputValue = event.currentTarget.value;
-  if (inputValue.length === Number(input.dataset.length)) {
-    input.classList.add("valid");
-    input.classList.remove("invalid");
+  const inputValue = event.currentTarget.value.trim().length;
+  if (inputValue === Number(input.dataset.length)) {
+    updateInput("valid", "invalid");
   } else {
-    input.classList.add("invalid");
-    input.classList.remove("valid");
+    updateInput("invalid", "valid");
   }
+}
+function updateInput(green, red) {
+  input.classList.add(green);
+  input.classList.remove(red);
 }
